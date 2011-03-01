@@ -1,0 +1,166 @@
+% set sans-serif headings, paper format,
+% font size and the main class
+\documentclass[twoside,openright,titlepage,fleqn,numbers=noenddot,headinclude,%1headlines,% 
+                fontsize=11pt,paper=a4,BCOR5mm,footinclude,cleardoublepage=empty,abstract=false, listof=totoc, bibliography=totoc]{scrreprt}
+
+%general packages
+\input{header}
+
+% === Formatting ===
+\renewcommand{\sectfont}{\rmfamily\scshape}
+\renewcommand{\descfont}{\rmfamily\itshape}
+
+
+\usepackage{color} %If you want to use it within your text, use the
+%command \textcolor{spot}{your text}
+\definecolor{spot}{rgb}{0.6,0,0}
+\definecolor{boxframe}{rgb}{0.6,0,0}
+\definecolor{boxfill}{rgb}{1,.95,.95}
+\definecolor{RoyalBlue}{rgb}{0,0.14,0.40}
+\definecolor{Maroon}{rgb}{0.5,0,0}
+\definecolor{Midnight}{rgb}{0,0.40,0.14}
+
+\usepackage{xspace}
+\usepackage[automark]{scrpage2}
+
+%bibliography
+\usepackage[numbers, sort&compress]{natbib}
+%\usepackage[sectionbib]{chapterbib}
+
+%sub figures
+\usepackage{subfig}
+\captionsetup[subfigure]{margin=10pt}
+
+% set the svn variables
+\usepackage{svn-multi}
+\svnidlong
+{$LastChangedBy: mathieu $}
+{$LastChangedRevision: 26 $}
+{$LastChangedDate: 2010-12-08 17:54:56 +0900 (mer. 08 déc. 2010) $}
+{$HeadURL: http://htw20/svn/tex/main.tex $}
+
+\usepackage{hyperref} %conflict with chapterbib
+\hypersetup{%
+	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+	% uncomment the following line if you want to have black links (e.g., for printing)
+	%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
+	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+	hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+	urlcolor=Maroon, linkcolor=RoyalBlue, citecolor=Midnight, %pagecolor=RoyalBlue,%
+	%urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+	pdftitle={Structural and dynamic heterogeneities in supercooled colloidal
+liquids: confocal microscopy study},%the title
+	pdfauthor={Mathieu Leocmach},%your name
+	pdfsubject={},%
+	pdfkeywords={},%
+	pdfcreator={XeLaTeX},%
+	pdfproducer={A happy XeLaTeX user}%
+}
+
+\usepackage{url}
+
+% Allow multirow cells in tables
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{rotating}
+
+\usepackage{textcomp}
+\usepackage[smaller]{acronym}
+
+% === Language settings ===
+% main language, for titles, spacing, punctuation rules, etc.
+% For a french text, should use \usepackage[frenchb]{babel}
+\usepackage[english]{polyglossia}
+
+% === Custom commands ===
+% All latin has the same formatting
+\newcommand{\latin}[1]{{\it #1}}
+%% In-document references
+\DeclareRobustCommand{\Chapter}{Chapter\xspace}
+\DeclareRobustCommand{\Section}{Section\xspace}
+\DeclareRobustCommand{\Appendix}{Appendix\xspace}
+\DeclareRobustCommand{\Figure}{Figure\xspace}
+\DeclareRobustCommand{\Table}{Table\xspace}
+\DeclareRobustCommand{\Equation}{equation\xspace}
+\DeclareRobustCommand{\Reference}{reference\xspace}
+%% Standard way to refer to a page number
+\DeclareRobustCommand{\Page}{page\xspace}
+
+%% Reference terms with built-in reference
+\DeclareRobustCommand{\ChapterRef}[1]{\Chapter~\ref{#1}}
+\DeclareRobustCommand{\SectionRef}[1]{\Section~\ref{#1}}
+\DeclareRobustCommand{\AppendixRef}[1]{\Appendix~\ref{#1}}
+\DeclareRobustCommand{\FigureRef}[1]{\Figure~\ref{#1}}
+\DeclareRobustCommand{\TableRef}[1]{\Table~\ref{#1}}
+\DeclareRobustCommand{\EquationRef}[1]{\Equation~\eqref{#1}}
+\DeclareRobustCommand{\ReferenceRef}[1]{\Reference~\cite{#1}}
+\DeclareRobustCommand{\PageRef}[1]{\Page~\pageref{#1}}
+
+
+%defie title and author
+\titlehead{東京大学、工学系、物理工学専攻\\Department of Applied Physics, Graduate School of Engineering, the University of Tokyo}
+\title{Structural and Dynamic Heterogeneities in Supercooled Colloidal
+Liquids:\\ Confocal Microscopy Study}
+\subtitle{コロイド過冷却液体における構造的不均一性と動的不均一性：\\共焦点顕微鏡による研究}
+\author{レオクマック　マチュー ・ \textsc{Leocmach} Mathieu}
+\date{平成22年12月提出\\December 2010}
+\publishers{指導教官:　田中 肇 教授\\Supervisor: Professor TANAKA Hajime}
+\dedication{To Lisa and Meï,\\ with a special thought to my families in France and in Japan.}
+
+%Control inclusions
+%\includeonly{acronyms, introduction}
+
+\begin{document} % Let's go!
+
+%********************************************************************
+% Frontmatter
+%*******************************************************
+%Begin the non numbered section at the head of the thesis
+\pagenumbering{roman}
+\pagestyle{plain}
+	\maketitle
+	\include{abstract}
+	\include{acknowledgements}
+	\tableofcontents
+	%\include{content}
+	%\listoffigures
+	%\lisoftables
+	\include{acronyms}
+	%Author: \svnauthor; Revision: \svnrev; Last changed on: \svndate; URL: \url{\svnkw{HeadURL}}
+	\pagestyle{scrheadings}
+
+%********************************************************************
+% Mainmatter
+%*******************************************************
+\pagenumbering{arabic}
+%reset the acronyms in order to have them displayed in full letters in the introduction
+\acresetall
+%% Start the content body of the thesis
+	\include{introduction}
+	
+	%\part{Method}
+	\include{experimental}
+	\include{tracking}
+	\include{structure_id}
+	\include{analysis_code}
+	
+	%\part{Results}
+	\include{struct_het}
+	\include{crystallisation}
+	\include{dynamics}	
+	
+	\include{conclusion}
+
+% ********************************************************************
+% Backmatter
+%*******************************************************
+%% Produce the appendices
+\appendix
+
+
+
+% Create the bibliography right after the text
+\bibliographystyle{unsrtnat}
+\bibliography{mathieu}
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[a4paper, 11pt, notitlepage]{scrartcl}
+
+\usepackage{fontspec} 
+\setmainfont{URW Palladio L}
+
+% Rules for Japanese formatting
+\usepackage{xeCJK}
+\setCJKmainfont[Scale=0.8]{Sazanami Mincho}
+\setCJKmainfont{Sazanami Mincho}
+\setCJKsansfont{IPAGothic}
+\setCJKmonofont{Sazanami Mincho}
+
+% Allow the usage of graphics (.jpg, .png, etc.) in the document
+%\usepackage{graphicx}
+
+% Allow multirow cells in tables
+%\usepackage{multirow}
+%\usepackage{array}
+%\usepackage{rotating}
+
+
+\usepackage{amsmath}
+\usepackage{newclude}
+\usepackage{comment}
+%\usepackage{textcomp}
+%\usepackage{xspace}
+%\usepackage[squaren, Gray]{SIunits}
+
+%\usepackage{url}
+%\usepackage[sectionbib]{chapterbib}
+
+% All latin has the same formatting
+\newcommand{\latin}[1]{{\it #1}}
+\makeatletter
+\newcommand*{\chapter}{\@ifstar
+\erasechapterStar%
+\erasechapterNoStar%
+}
+\newcommand{\erasechapterStar}[2]{\includecomment{#1}}
+\newcommand{\erasechapterNoStar}[1]{\includecomment{#1}}
+\makeatother
+
+%define title and author
+\subject{論文の内容の要旨}
+\title{Structural and dynamic heterogeneities in supercooled colloidal
+liquids: confocal microscopy study}
+\subtitle{コロイド過冷却液体における構造的不均一性と動的不均一性：共焦点顕微鏡による研究}
+\author{レオクマック　マチュー・LEOCMACH Mathieu}
+\date{}
+
+
+\begin{document}
+\maketitle
+\include*{abstract}
+\end{document}

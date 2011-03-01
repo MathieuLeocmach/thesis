@@ -1,0 +1,84 @@
+%% Creator: Inkscape inkscape 0.48.0, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'msd_w6Q6quarter.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}
+    \renewcommand\color[2][]{}%
+  }
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}
+    \renewcommand\transparent[1]{}%
+  }
+  \providecommand\rotatebox[2]{#2}
+  \ifx\svgwidth\undefined
+    \setlength{\unitlength}{381.49267926pt}
+  \else
+    \setlength{\unitlength}{\svgwidth}
+  \fi
+  \global\let\svgwidth\undefined
+  \makeatother
+  \begin{picture}(1,0.88988234)%
+    \put(0,0){\includegraphics[width=\unitlength]{msd_w6Q6quarter.pdf}}%
+    \put(0.57145457,0.02823263){\makebox(0,0)[b]{\smash{$-0.1$}}}%
+    \put(0.66670148,0.02823263){\makebox(0,0)[b]{\smash{$0$}}}%
+    \put(0.7619484,0.02823263){\makebox(0,0)[b]{\smash{$0.1$}}}%
+    \put(0.85719531,0.02823263){\makebox(0,0)[b]{\smash{$0.2$}}}%
+    \put(0.76618859,0.28835491){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\phi=0.576$}}}%
+    \put(0.09383598,0.02823263){\makebox(0,0)[b]{\smash{$-0.2$}}}%
+    \put(0.18908288,0.02823263){\makebox(0,0)[b]{\smash{$-0.1$}}}%
+    \put(0.2843298,0.02823263){\makebox(0,0)[b]{\smash{$0$}}}%
+    \put(0.37957671,0.02823263){\makebox(0,0)[b]{\smash{$0.1$}}}%
+    \put(0.47306212,0.01523106){\makebox(0,0)[b]{\smash{$w_6$}}}%
+    \put(0.08024725,0.05767487){\makebox(0,0)[rb]{\smash{$0$}}}%
+    \put(0.08024725,0.12121475){\makebox(0,0)[rb]{\smash{$0.1$}}}%
+    \put(0.08024725,0.18475463){\makebox(0,0)[rb]{\smash{$0.2$}}}%
+    \put(0.08024725,0.24816869){\makebox(0,0)[rb]{\smash{$0.3$}}}%
+    \put(0.08024725,0.31158275){\makebox(0,0)[rb]{\smash{$0.4$}}}%
+    \put(0.08024725,0.37512264){\makebox(0,0)[rb]{\smash{$0.5$}}}%
+    \put(0.38381687,0.28835491){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\phi=0.555$}}}%
+    \put(0.76618859,0.67072657){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\phi=0.535$}}}%
+    \put(0.08024725,0.50358642){\makebox(0,0)[rb]{\smash{$0.1$}}}%
+    \put(0.08024725,0.5671263){\makebox(0,0)[rb]{\smash{$0.2$}}}%
+    \put(0.08024725,0.63054036){\makebox(0,0)[rb]{\smash{$0.3$}}}%
+    \put(0.08024725,0.69395442){\makebox(0,0)[rb]{\smash{$0.4$}}}%
+    \put(0.08024725,0.75749431){\makebox(0,0)[rb]{\smash{$0.5$}}}%
+    \put(0.08024725,0.8210342){\makebox(0,0)[rb]{\smash{$0.6$}}}%
+    \put(0.02767398,0.44034222){\makebox(0,0)[b]{\smash{$Q_6$}}}%
+    \put(0.38381687,0.67072657){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\phi=0.497$}}}%
+    \put(0.90713437,0.05756751){\makebox(0,0)[lb]{\smash{$0.0$}}}%
+    \put(0.90713437,0.4365173){\makebox(0,0)[lb]{\smash{$1.0$}}}%
+    \put(0.90713437,0.81532922){\makebox(0,0)[lb]{\smash{$2.0$}}}%
+    \put(0.9928785,0.44492859){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[b]{\smash{$\mathcal{P}r(w_6, Q_6, t^{dh})/\left\langle\Delta r^2(t^{dh}) \right\rangle$}}}}%
+    \put(0.26627252,0.76418765){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{\acs{FCC}}}}%
+    \put(0.26627252,0.71763365){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{\acs{HCP}}}}%
+    \put(0.09704091,0.6207511){\color[rgb]{0,0.50196078,0.50196078}\makebox(0,0)[lb]{\smash{Icosahedron}}}%
+    \put(0.19012376,0.34855711){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$w_6^{dodec}$}}}%
+    \put(0.45503041,0.23435854){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$Q_6^{mrco}$}}}%
+    \put(0.14586572,0.39469168){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$w_6^*$}}}%
+  \end{picture}%
+\endgroup

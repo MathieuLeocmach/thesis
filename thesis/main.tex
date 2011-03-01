@@ -1,0 +1,79 @@
+% set sans-serif headings, paper format,
+% font size and the main class
+\documentclass{hepthesis}
+
+\usepackage{fontspec} 
+\setmainfont{URW Palladio L}
+
+% Rules for Japanese formatting
+\usepackage{xeCJK}
+\setCJKmainfont[Scale=0.8]{Sazanami Mincho}
+
+% Allow the usage of graphics (.jpg, .png, etc.) in the document
+\usepackage{graphicx}
+
+% Allow multirow cells in tables
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{rotating}
+
+
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{xspace}
+\usepackage[squaren, Gray]{SIunits}
+
+\usepackage[sectionbib]{chapterbib}
+
+% set the svn variables
+\usepackage{svn-multi}
+\svnidlong
+{$LastChangedBy$}
+{$LastChangedRevision$}
+{$LastChangedDate$}
+{$HeadURL$}
+
+\usepackage{url}
+%\usepackage{hyperref} %conflict with chapterbib
+
+% All latin has the same formatting
+\newcommand{\latin}[1]{{\it #1}}
+
+%defie title and author
+\title{Structural and dynamic heterogeneities in supercooled colloidal
+liquids: confocal microscopy study.\\ \bigskip{} コロイド過冷却液体における構造的不均一性と動的不均一性：共焦点顕微鏡による研究。}
+\author{Mathieu Leocmach}
+
+\begin{document} % Let's go!
+
+%Begin the non numbered section at the head of the thesis
+\begin{frontmatter}
+	\include{title}
+	\begin{abstract}
+		\include{abstract}
+	\end{abstract}
+	\tableofcontents
+	% \lisoftables
+	Author: \svnauthor; Revision: \svnrev; Last changed on: \svndate; URL: \url{\svnkw{HeadURL}}
+\end{frontmatter}
+
+%% Start the content body of the thesis
+\begin{mainmatter}
+	%\include{introduction}
+	\include{experimental}
+	\include{tracking}
+	\include{structure_id}
+	%\include{conclusion}
+\end{mainmatter}
+
+%% Produce the appendices
+\begin{appendices}
+%\input{appendices}
+\end{appendices}
+
+\begin{backmatter}
+% Create the bibliography right after the text
+\bibliographystyle{ieeetr}
+\bibliography{mathieu}
+\end{backmatter}
+\end{document}

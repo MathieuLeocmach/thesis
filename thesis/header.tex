@@ -1,0 +1,32 @@
+%proper math and math symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{xltxtra} %some packages for xelatex
+
+\usepackage[squaren, Gray, binary]{SIunits}
+% Allow the usage of graphics (.jpg, .png, etc.) in the document
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,backgrounds}
+
+%font support
+\usepackage{xunicode, fontspec} 
+\setmainfont[
+   ExternalLocation=/usr/share/texmf/fonts/opentype/public/tex-gyre/,
+   BoldFont=texgyrepagella-bold.otf,
+   ItalicFont=texgyrepagella-italic.otf,
+   BoldItalicFont=texgyrepagella-bolditalic.otf
+]{texgyrepagella-regular.otf}
+\setmonofont{Asana Math}
+
+% Rules for Japanese formatting
+\usepackage{xeCJK}
+\setCJKmainfont{IPAMincho}
+\setCJKsansfont{IPAGothic}
+\setCJKmonofont{IPAMincho}
+%For japanese input :
+\newfontfamily\ja[Scale=0.8]{IPAMincho}
+
+%math fonts
+\setmathrm{Asana Math}
