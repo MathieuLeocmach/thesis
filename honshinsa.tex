@@ -1,0 +1,78 @@
+\usetheme{default}
+\usecolortheme{rose}
+
+%general packages
+\input{header}
+
+%beamer related package
+
+%bibliography
+\usepackage{natbib, bibentry}
+\def\newblock{\hskip .11em plus .33em minus .07em}
+
+\def\simplephasediagram#1{%
+	\begin{tikzpicture}[remember picture, xscale=40]
+		\tikzset{sim marker/.style={circle, fill=black, inner sep=0, minimum size=0.3em}}
+		\tikzset{xp marker/.style={rotate=45, rectangle, draw=black, fill=white, inner sep=0, minimum size=0.5em}}
+    	\fill[blue!50] (0.44, -0.4em) rectangle (0.495, 0.4em);
+    	\fill[blue!50!red!50] (0.495, -0.4em) rectangle (0.545, 0.4em);
+    	\fill[red!50] (0.545, -0.4em) rectangle (0.59, 0.4em);
+    	\draw[->, thick] (0.44,0) -- (0.59, 0);
+    	\foreach \x in {0.4870, 0.5075,0.5276,0.5481, 0.5678} \node[sim marker] at (\x, 0) (sim\x){};
+    	\foreach \x in {0.497, 0.535, 0.555, 0.576} \node[xp marker] at (\x, 0) (exp\x){};
+    	#1%
+	\end{tikzpicture}%
+}
+
+%silent acronym macros
+\def\ac#1{#1}
+\def\acs#1{#1}
+
+%absolute positioning
+\usepackage[absolute,overlay]{textpos}
+
+\institute{東京大学、工学系、物理工学専攻\\指導教官:　田中 肇 教授}
+\title{Structural and dynamic heterogeneities in supercooled colloidal
+liquids: confocal microscopy study}
+\subtitle{コロイド過冷却液体における構造的不均一性と\\動的不均一性：共焦点顕微鏡による研究}
+\author[M. Leocmach]{レオクマック　マチュー ・ LEOCMACH Mathieu\\学生番号：37-087105}
+\date{平成22年12月提出}
+
+%\includeonly{current_slide}
+
+\begin{document}
+\bibliographystyle{notitle}
+\nobibliography{mathieu}
+
+\AtBeginSection[]{
+	\begin{frame}[plain]
+		\tableofcontents[currentsection, hideothersubsections]
+	\end{frame}
+}
+
+\begin{frame}[plain]
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\tableofcontents[hidesubsections]
+\end{frame}
+
+%\include{current_slide}
+
+\section{Supercooled liquids and the glass transition}
+\include{h_intro}
+
+\section{Hard spheres colloids tracked by confocal microscopy}
+\include{h_methods}
+
+\section[Structure]{Structural heterogeneities}
+\include{h_structure}
+
+\section[Link with dynamics]{Link between structures and dynamics}
+\include{h_str_dyn}
+
+\appendix
+\include{h_appendix}
+
+\end{document}

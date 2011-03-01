@@ -1,0 +1,24 @@
+digraph Tracking
+{
+lif[label="Leica Image File"];
+dat_files[label="Coordinate files"];
+displ_file[label="Displacement"];
+traj_file[label="Trajectories"];
+/*radMin[label="$r_{min}$"];
+radMax[label="$r_{min}$"]; */
+
+{
+	node [shape=box];
+	Tracker;
+	Deshaker;
+	Linker;
+	Structure[label="Structural analysis"];
+	Dynamics[label="Dynamical analysis"];
+}
+
+
+{radMin; radMax; threshold; lif} -> Tracker -> dat_files -> Structure;
+lif -> Deshaker -> displ_file;
+{dat_files; displ_file; radius;} -> Linker -> traj_file;
+{dat_files; traj_file} -> Dynamics;
+}

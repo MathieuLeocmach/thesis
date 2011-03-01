@@ -1,0 +1,358 @@
+\begin{frame}{Configuration and vibration}
+	\begin{columns}
+	\column{0.6\textwidth}
+	\def\svgwidth{\columnwidth}
+	\centering\small{\input{specific_heat.pdf_tex}}
+	
+	\column{0.4\textwidth}
+	A solid has only one configuration: non-ergodic
+	\[ S = S_c + S_{vib} \]
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Dynamical functions}
+	\begin{itemize}
+		\item Self (Incoherent) Intermediate Function
+		\[ F_s(q,t) \equiv \frac{1}{N} \left\langle\sum_{i=1}^N e^{-\imath\vec{q}\cdot\bigl(\vec{r_i}(t)-\vec{r_i}(0)\bigr)}\right\rangle \]
+		\item Mean square displacement
+		\[ \Delta r(t)^2 = \left\langle\| \vec{r_i}(t)-\vec{r_i}(0)\|^2\right\rangle \]
+	\end{itemize}
+\end{frame}
+
+\section{Structure}
+\subsection{Bond network}
+
+\begin{frame}{Bond network - Neighbours}
+	\begin{columns}
+	\column{0.4\textwidth}
+	\includegraphics[width=\columnwidth]{voro2d}\\
+	\centering Voronoi decomposition
+	\column{0.6\textwidth}
+	\centering Radial distribution function\\
+	\includegraphics[width=\columnwidth]{typicalRdf}
+	\begin{itemize}
+		\item A bond between neighbours
+		\item Voronoi is not good (anisotropy)
+		\item First shell
+	\end{itemize}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Topology of the bond network}
+	\begin{columns}
+	\column{0.3\textwidth}
+	\centering FCC\\
+	\includegraphics[width=\columnwidth]{fcc_13}
+	
+	\bigskip
+	\includegraphics[width=\columnwidth]{ico_13_1551}\\
+	Icosahedron
+	\column{0.7\textwidth}
+	\begin{itemize}
+		\item Number of neighbours
+		\item Voronoi signature \citep{tanemura1977geometrical}
+		\item Common neighbours \citep{Honeycutt1987}
+		\item Topological cluster classification \citep{Williams2007}
+	\end{itemize}
+	Difficult to correlate discrete categories in time or space.
+	\end{columns}
+\end{frame}
+
+\subsection{Spherical harmonics}
+
+\begin{frame}{Spherical harmonics}
+	\begin{columns}
+	\column{0.5\textwidth}
+	\begin{itemize}
+		\item Analogue to Fourier decomposition
+		\item On a sphere
+	\end{itemize}
+	\column{0.5\textwidth}
+	\[ h(\theta,\phi) = \sum_{\ell=0}^{\infty} \sum_{m=-\ell}^{\ell} q_{\ell m} Y_{\ell m}(\theta,\phi) \]
+	\end{columns}
+	\begin{description}
+		\item[$\ell$] Order of symmetry
+		\item[$m$] Orientation
+		\item[$(r,\theta,\phi)$] Spherical coordinates
+	\end{description}
+	\begin{center}Altitude on earth: Decomposition\end{center}
+	\begin{tabular}{ccc}
+	\includegraphics[width=0.3\textwidth]{earth_l1} & \includegraphics[width=0.3\textwidth]{earth_l2} & \includegraphics[width=0.3\textwidth]{earth_l3} \\ 
+	$\ell=1$ & $\ell=2$ & $\ell=3$ \\ 
+	\end{tabular} 
+\end{frame}
+
+\begin{frame}{Approximation by spherical harmonics}
+	\begin{columns}[T]
+	\centering
+	\column{0.4\textwidth}
+	\includegraphics[width=\textwidth]{earth_to6}\\
+	\centering{$\sum_{\ell=0}^6$}
+	
+	\includegraphics[width=\textwidth]{earth_to36}\\
+	\centering{$\sum_{\ell=0}^{36}$}
+	\column{0.4\textwidth}
+	\includegraphics[width=\textwidth]{earth_to16}\\
+	\centering{$\sum_{\ell=0}^{16}$}
+	
+	\includegraphics[width=\textwidth]{earth_grid}\\
+	Full grid of earth topography
+	\end{columns}
+\end{frame}
+
+\subsection{Bond orientational order}
+
+\againframe{local_sym_sh}
+
+\begin{frame}{Bond orientational order}
+	\begin{columns}
+	\column{0.5\textwidth}
+	\begin{itemize}
+		\item A set of spherical harmonics for each
+		\begin{itemize}
+			\item Bond $\vec{r}_{ij}$
+			\item Neighbourhood
+		\end{itemize}
+		\item Rotational invariants
+		\begin{itemize}
+			\item Strength of the $\ell$-fold symmetry
+			\item Characterise the symmetry group
+		\end{itemize}
+	\end{itemize}
+	\column{0.5\textwidth}
+	\[ q_{\ell m}(i) = \frac{1}{N_i}\sum_{j=0}^{N_i} Y_{\ell m}(\theta(\vec r_{ij}),\phi(\vec r_{ij})) \]
+	\[ q_\ell = \sqrt{\frac{4\pi}{2l+1} \sum_{m=-\ell}^{\ell} |q_{\ell m}|^2 } \]
+	\end{columns}
+	\[w_\ell = \frac{
+		\sum\limits_{m_1+m_2+m_3=0} 
+			\left( \begin{array}{ccc}
+				\ell & \ell & \ell \\
+				m_1 & m_2 & m_3 
+			\end{array} \right)
+			q_{\ell m_1} q_{\ell m_2} q_{\ell m_3}
+	}{
+		\left(
+			\sum\limits_{m=-\ell}^{\ell} |q_{\ell m}|^2
+		\right)^{\frac{3}{2}}
+	}\]
+	
+	\footnotesize{\bibentry{steinhardt1983boo}}
+\end{frame}
+
+\begin{frame}{Invariants distributions}
+	\begin{columns}
+	\column{0.6\textwidth}
+	\includegraphics[width=\columnwidth]{gasser_invariants}
+	\column{0.4\textwidth}
+	\begin{itemize}
+		\item Distributions are
+		\begin{itemize}
+			\item Noisy
+			\item Broad
+			\item Overlapping
+		\end{itemize}
+		\item Can characterize a sample
+		\item Cannot characterize a single particle
+	\end{itemize}
+	\end{columns}
+	\footnotesize{\bibentry{Gasser2001}}
+\end{frame}
+
+\begin{frame}{Coarse-grained BOO}
+	\begin{columns}
+	\column{0.6\textwidth}
+	\includegraphics[width=\columnwidth]{invariants_maps_raster}
+	\column{0.4\textwidth}
+	\[ Q_{\ell m}(i) = \frac{1}{\tilde{N} (i)} \sum_{k=0}^{\tilde{N}(i)} q_{\ell m}(k) \]
+	\begin{itemize}
+		\item Take into account the second shell
+		\item Structures with some periodicity are much better defined
+		\item Non periodic structures goes to zeros
+	\end{itemize}
+	\end{columns}
+	\footnotesize{\bibentry{lechner:114707}}
+\end{frame}
+
+\subsection{Lifetime}
+
+\begin{frame}{Time correlation}
+	\begin{itemize}
+	\item Time auto-correlation of the bond order
+	\[
+	g_\ell(t) \equiv \left\langle \frac{
+		\sum_{m=-\ell}^{\ell} q_{\ell m}(i, t_0) q_{\ell m}^{*}(i, t_0+t)
+	}{
+		\sqrt{\sum_{m=-\ell}^{\ell} \left\|q_{\ell m}(i,t_0)\right\|^2}
+	}\right\rangle_{i, t_0}
+	\]
+	\item Can be done with the $Q_{\ell m}$ to discard aperiodic structures $\Longrightarrow G_\ell(t)$
+	\item The ratio $G_\ell(t)/g_\ell(t)<1$ gives the proportion of $t$-lived structures that are periodic
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Lifetimes}
+	\begin{textblock*}{0.6\textwidth}(10mm,92mm)
+		\simplephasediagram{}
+	\end{textblock*}
+	%\tikz[baseline, remember picture]\node[anchor=base] (text)%
+	%		{Near $\phi_g$ and $\tau_\alpha$, MRCO live longer than icosahedra};
+	\tikzstyle{background grid}=[draw, black!50,step=0.1\textwidth]
+	\begin{center}
+    \begin{tikzpicture}%, show background grid]
+		\node [inner sep=0pt,above right] 
+			{\resizebox{0.7\textwidth}{!}{\input{Qlm_qlm_correl_ratio}}};
+		%\node [rectangle, red, minimum width=0.08\textwidth, minimum height=0.05\textwidth, draw] at (0.3\textwidth, 0.4\textwidth) (q4) {};
+		\node [rectangle, red, minimum width=0.08\textwidth, minimum height=0.05\textwidth, draw] at (0.6\textwidth, 0.4\textwidth) (q6) {};
+		\node at (0.35\textwidth, 0.525\textwidth) (text)%
+			{Near $\phi_g$ and $\tau_\alpha$, MRCO live longer than icosahedra};
+		%\path[->] (text) edge (q4);
+		\path[->] (text.east) edge [out=-45, in=0] (q6.east);
+	\end{tikzpicture}
+	\begin{description}
+		\item[$\ell=8\nearrow$] No long-lived aperiodic $8$-fold
+		\item[$\ell=10\searrow$] No long lived periodic $10$-fold
+	\end{description}
+	\end{center}
+\end{frame}
+
+\subsection{Spatial correlation}
+
+\begin{frame}{Spatial correlation}
+	\begin{itemize}
+		\item Correlation of the bond order between particles $i$ and $j$
+		\[ s_\ell(i,j) = \frac{
+			\sum_{m=-\ell}^{\ell} q_{\ell m}(i) q_{\ell m}^{*}(j)
+		}{
+			\sqrt{\sum_{m=-\ell}^{\ell} |q_{\ell m}(i)|^2} \sqrt{\sum_{m=-\ell}^{\ell} |q_{\ell m}(j)|^2}
+		}\]
+		\item Spatial correlation
+		\[ g_\ell(r) \equiv \frac{1}{N}\sum_i^N \frac{
+			\sum_{j \neq i}{ s_\ell(i,j) \delta\left(\left\|\vec{r}_i-\vec{r}_j \right\| - r \right)}
+		}{
+		\sum_{j \neq i}{\delta\left(\left\|\vec{r}_i-\vec{r}_j \right\| - r \right)}
+		} \]
+		\item Can be done with the $Q_{\ell m}$ to discard aperiodic structures $\Longrightarrow G_\ell(r)$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Size of the crystal-like ordered regions}
+	\begin{textblock*}{0.6\textwidth}(10mm,92mm)
+		\simplephasediagram{}
+	\end{textblock*}
+	\begin{columns}
+	\column{0.5\textwidth}
+	\resizebox{\columnwidth}{!}{\begin{LARGE}\input{fit_G6.tex}\end{LARGE}}\\
+	\resizebox{\columnwidth}{!}{\begin{LARGE}\input{g6.tex}\end{LARGE}}
+	\column{0.5\textwidth}
+	\begin{itemize}
+		\item With coarse-graining
+		\begin{itemize}
+			\item Ornstein-Zernike fit
+			\[ G_6(r) \propto r^{-1}\exp( -\frac{r}{\xi_6} )\]
+			\item Growing correlation length
+		\end{itemize}
+		
+		\bigskip
+		\item Without coarse-graining
+		\begin{itemize}
+			\item Alternatively positive and negative
+			\item Susceptibility $\simeq 0$
+			\item No long range correlation
+		\end{itemize}
+	\end{itemize}
+	\end{columns}
+\end{frame}
+
+\section{Crystallisation}
+
+\begin{frame}{Crystallisation at the wall}
+	\begin{columns}[T]
+	\column{0.5\textwidth}
+	\includegraphics[width=\columnwidth]{X_mountains_Q6}\\
+	\centering{Colour by degree of crystallisation ($Q_6$)}
+	\column{0.5\textwidth}
+	\includegraphics[width=\columnwidth]{X_mountains_W4}\\
+	\tikz\shade[ball color=blue] (0,0) circle (0.5em); FCC\quad
+	\tikz\shade[ball color=yellow] (0,0) circle (0.5em); HCP\quad
+	($W_4$)
+	\end{columns}
+	\begin{itemize}
+		\item Real crystals: $Q_6>0.4$
+		\item Not growing homogeneously
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Heterogeneous nucleation process}
+	\tikz\shade[ball color=green!50!black] (0,0) circle (0.5em); $0.25<Q_6<0.4$: crystal-like order\quad
+	\tikz\shade[ball color=red!50!black] (0,0) circle (0.5em); $0.4<Q_6$: crystal
+	\begin{columns}
+	\column{0.25\textwidth}
+	\includegraphics[width=\columnwidth]{X_t000}\\
+	$t=\unit{0}{\hour}$
+	
+	\bigskip\includegraphics[width=\columnwidth]{X_t100}\\
+	$t=\unit{20}{\hour}$
+	%
+	\column{0.25\textwidth}
+	\includegraphics[width=\columnwidth]{X_t025}\\
+	$t=\unit{5}{\hour}$
+	
+	\bigskip\includegraphics[width=\columnwidth]{X_t150}\\
+	$t=\unit{30}{\hour}$
+	%
+	\column{0.25\textwidth}
+	\includegraphics[width=\columnwidth]{X_t050}\\
+	$t=\unit{10}{\hour}$
+	
+	\bigskip\includegraphics[width=\columnwidth]{X_t200}\\
+	$t=\unit{40}{\hour}$
+	%
+	\column{0.25\textwidth}
+	\includegraphics[width=\columnwidth]{X_t075}\\
+	$t=\unit{15}{\hour}$
+	
+	\bigskip\includegraphics[width=\columnwidth]{X_t299}\\
+	$t=\unit{60}{\hour}$
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Heterogeneous nucleation movie}
+	\begin{columns}
+	\column{0.6\textwidth}
+	%\movie[externalviewer, inline=false, text={
+		\includegraphics[width=\columnwidth]{X_t150}%}]{}{}{X.mov}
+		\\
+	\tikz\shade[ball color=green!50!black] (0,0) circle (0.5em); $0.25<Q_6<0.4$: crystal-like order\\
+	\tikz\shade[ball color=red!50!black] (0,0) circle (0.5em); $0.4<Q_6$: crystal
+	\column{0.4\textwidth}
+	\begin{itemize}
+		\item Bond order first
+		\item Nucleation from the ordered regions
+		\item $\simeq$ wetting
+	\end{itemize}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Density profiles}
+	\centering\resizebox{0.8\textwidth}{!}{\input{X_profile}}
+	\begin{itemize}
+		\item Layering at the wall
+		\item Icosahedra's centres are also layered
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Normalised density profiles}
+	\begin{columns}
+	\column{0.5\textwidth}
+	\resizebox{\columnwidth}{!}{\input{X_profile_normed}}
+	\column{0.5\textwidth}
+	\begin{itemize}
+		\item Normalise by the volume available to the icosahedron
+		\item Excluded from crystal-like order
+	\end{itemize}
+	\end{columns}
+	\begin{itemize}
+		\item Icosahedral order penetrate deep in the valley between the nucleus
+		\item Icosahedra fit better between the layers
+	\end{itemize}
+\end{frame}
